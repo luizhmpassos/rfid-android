@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnEncontrar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="186dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="84dp"
+        android:background="@android:color/holo_blue_dark"
+        android:contentDescription="Encontrar Item"
+        android:onClick="loadFindingView"
+        android:text="Encontrar"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Encontrar" />
+
+    <Button
+        android:id="@+id/btnDescrever"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="112dp"
+        android:background="@android:color/holo_blue_dark"
+        android:contentDescription="Descrever Itens"
+        android:onClick="loadDescribeView"
+        android:text="Descrever"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Descrever" />
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="190dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnScan" />
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:onClick="scanDevices"
+        android:text="Scan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDescrever" />
+
+
+</android.support.constraint.ConstraintLayout>
